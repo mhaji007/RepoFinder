@@ -8,6 +8,14 @@ const index = () => {
     )
 }
 
+export const getServerSideProps = async() => {
+    return {
+        props: {
+            value: 1
+        }
+    }
+}
+
 export default index;
 
 
