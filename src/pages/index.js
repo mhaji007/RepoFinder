@@ -28,9 +28,14 @@ const index = () => {
     const loadRepos = async (searchText, language) => {
         setLoading(true);
         const res = await searchRepos(searchText, language);
-        setLoading(false);
-        setRepos(res.data.items);
-    }
+        
+        if (res && res.data) {
+            
+            setLoading(false);
+            setRepos(res.data.items);
+        }
+        
+    };
 
 
     return (

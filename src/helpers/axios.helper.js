@@ -23,8 +23,16 @@ async function axiosGetCancelable(url, config) {
     // Merge the cancel config with the regular config
     Object.assign(cancelConfig, config);
 
-    const res = await axios.get(url, cancelConfig);
-    return res;
+    try {
+        const res = await axios.get(url, cancelConfig);
+        return res;
+        
+    } catch (error) {
+        if(error.message !=='canceled') {
+            throw error;
+        }
+    }
+
 
 
 }
