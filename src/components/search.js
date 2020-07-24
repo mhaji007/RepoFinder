@@ -1,13 +1,14 @@
 import React from 'react';
 import TextInput from './shared/text-input';
 import Select from './shared/select';
+import LANGUAGES from '../constants/languages.constant';
 
 const Search = (props) => {
     
     const {language, searchText, onSearchTextChange, onLanguageChange} = props;
     
     // Options used in select
-    const language = []
+    const languages = [{ value: '', label: 'All' }, ...LANGUAGES]
     
     return (
         

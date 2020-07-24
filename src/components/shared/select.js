@@ -9,7 +9,7 @@ const Select = ({label, value, onChange, options}) => {
 
             <select value={value} onChange={(e) => onChange(e.target.value)}>
                 {
-                    option.map((option) => (
+                    options.map((option) => (
                         <option key={option.value} value={option.value}>
                             {option.label}
                         </option>
