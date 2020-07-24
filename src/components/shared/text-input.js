@@ -2,10 +2,10 @@ import React from 'react'
 
  const TextInput = ({label, value, onChange, placeholder}) => {
     return (
-        
+
         <div>
         {label}
-            <input value={value} onChnage={(e)=> onChange(e.targret.value)}
+            <input value={value} onChange={(e)=> onChange(e.target.value)}
             placeholder={placeholder}/>  
         </div>
     )

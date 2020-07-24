@@ -1,6 +1,6 @@
+// value is what is sent to Github API
+// label is what is shown
 const LANGUAGES = [
-    // value is what is sent to Github API
-    // label is what is shown
     {value:'csharp#', label: 'C#'},
     {value:'javascript', label: 'JavaScript'},
     {value:'go', label: 'Go'},

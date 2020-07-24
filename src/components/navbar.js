@@ -12,8 +12,7 @@ import Link from 'next/link';
                 </li>
                 <li>
                     <Link href="/about" as="/about">
-                        <a>
-                            About</a>
+                        <a>About</a>
                     </Link>
                 </li>
             </ul>
