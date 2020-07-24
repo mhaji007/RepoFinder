@@ -14,7 +14,10 @@ const index = () => {
 
     const onSearchTextChange = (text) => {
         setSearchText(text);
-        loadRepos(text, language);
+        if (text) {
+
+            loadRepos(text, language);
+        }
     }
 
     const onLanguageChange = (language) => {
