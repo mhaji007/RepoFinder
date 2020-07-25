@@ -4,6 +4,7 @@ import axios from 'axios';
 import Search from '../components/search';
 import {searchRepos} from '../services/githubService';
 import RepoList from '../components/repo.list';
+import { getRandomWord } from '../helpers/randomWord.helper';
 
 
 const Index = (props) => {
@@ -57,7 +58,7 @@ const Index = (props) => {
 
 export const getServerSideProps = async() => {
 
-    const searchText = 'Tetris';
+    const searchText = getRandomWord();
     const res = await searchRepos(searchText);
 
     return {
