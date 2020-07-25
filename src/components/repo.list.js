@@ -1,5 +1,5 @@
 import React from 'react';
-import RepoListItem from './repo-list-item';
+import RepoListItem from './repo.list.item';
 
 const RepoList = ({repos, loading}) => {
 
