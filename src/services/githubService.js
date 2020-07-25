@@ -14,6 +14,8 @@ function searchRepos(searchText, language) {
 // If there are no languages, use searchText
 const query = language ? `${searchText}+language:${language}`: searchText;
 
+// Remove config since we now are making a request
+// to our own API and not to Github
 return axiosGetCancelable(`api/search?q=${query}&sort=stars&order=desc`);
 
     // return axios.get(
@@ -24,8 +26,6 @@ return axiosGetCancelable(`api/search?q=${query}&sort=stars&order=desc`);
     // return axiosGetCancelable(`search/repositories?q=${query}&sort=stars&order=desc`,
     // axiosConfig)
 
-    // Remove config since we now are making a request
-    // to our own API and not to Github
     
 }
 
