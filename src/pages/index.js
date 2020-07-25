@@ -6,11 +6,11 @@ import {searchRepos} from '../services/githubService';
 import RepoList from '../components/repo.list';
 
 
-const index = () => {
+const Index = (props) => {
 
-    const [searchText, setSearchText] = useState('');
+    const [searchText, setSearchText] = useState(props.searchText);
+    const [repos, setRepos] = useState(props.repos);
     const [language, setLanguage] = useState('');
-    const [repos, setRepos] = useState([]);
     const [loading, setLoading] = useState(false);
 
 
@@ -56,13 +56,18 @@ const index = () => {
 }
 
 export const getServerSideProps = async() => {
+
+    const searchText = 'Tetris';
+    const res = await searchRepos(searchText);
+
     return {
         props: {
-            value: 1
+            searchText: searchText,
+            repos: res.data.items
         }
     }
 }
 
-export default index;
+export default Index;
 
 
