@@ -5,6 +5,7 @@ import Search from '../components/search';
 import {searchRepos} from '../services/githubService';
 import RepoList from '../components/repo.list';
 import { getRandomWord } from '../helpers/randomWord.helper';
+import styles from './index.module.scss';
 
 
 const Index = (props) => {
@@ -42,7 +43,9 @@ const Index = (props) => {
 
 
     return (
-        <div>
+        <div className={styles.container}>
+
+            <img className={styles.logo} src="/img/study.svg"></img>
 
             <Search searchText={searchText}
             language={language}
