@@ -25,16 +25,6 @@ const Navbar = () => {
         </a>
       </div>
 
-      <div class="navbar-menu">
-        <div class="navbar-start">
-          <Link href="/">
-            <a class="navbar-item">Home</a>
-          </Link>
-          <Link href="/about">
-            <a class="navbar-item">About</a>
-          </Link>
-        </div>
-      </div>
     </nav>
   );
 };
