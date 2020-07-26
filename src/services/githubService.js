@@ -28,6 +28,14 @@ if (isServer()) {
 function isServer() {
     return typeof window === 'undefined';
   }
+
+  function getRepo(id) {
+    return axios.get(`repositories/${id}`, axiosConfig);
+  }
+  
+  function getProfile(username) {
+    return axios.get(`users/${username}`, axiosConfig);
+  }
   
 
 // Remove config since we now are making a request
@@ -45,5 +53,5 @@ function isServer() {
     
 
 
-export {searchRepos};
+export {searchRepos, getProfile, getRepo};
 
