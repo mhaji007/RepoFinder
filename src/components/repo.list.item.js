@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './repo-list-item.module.scss';
+import {FaStar, FaCodeBranch} from 'react-icons/fa';
 
 const RepoListItem = ({repo}) => {
 
@@ -26,11 +27,12 @@ const RepoListItem = ({repo}) => {
                 <div className={styles.counters}>
                     <div className={styles.counter}>
                     
+                    <FaStar/>
                     <span>{repo.stargazers_count}</span>
 
                     </div>
                     <div className={styles.counter}>
-                    
+                    <FaCodeBranch/>
                     <span>{repo.forks_count}</span>
 
                     </div>
